@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>GSAP Airplane Animation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper">
+        <img src="./img/airplane.png" id="airplane" alt="" />
+        <div class="rockets">
+          <img src="./img/rocket.png" class="rocket" id="rocket-1" alt="" />
+          <img src="./img/rocket.png" class="rocket" id="rocket-2" alt="" />
+          <img src="./img/rocket.png" class="rocket" id="rocket-3" alt="" />
+        </div>
+      </div>
+      <div class="lower">
+        <div class="target-one">
+          <img src="./img/house-1.png" class="house" id="house-1" alt="" />
+          <img
+            src="./img/explosion-1.png"
+            class="explosion"
+            id="explosion-1"
+            alt=""
+          />
+          <img src="./img/smoke.png" class="smoke" id="smoke-1" alt="" />
+        </div>
+        <div class="target-two">
+          <img src="./img/house-2.png" class="house" id="house-2" alt="" />
+          <img
+            src="./img/explosion-2.png"
+            class="explosion"
+            id="explosion-2"
+            alt=""
+          />
+          <img src="./img/smoke.png" class="smoke" id="smoke-2" alt="" />
+        </div>
+        <div class="target-three">
+          <img src="./img/house-3.png" class="house" id="house-3" alt="" />
+          <img
+            src="./img/explosion-3.png"
+            class="explosion"
+            id="explosion-3"
+            alt=""
+          />
+          <img src="./img/smoke.png" class="smoke" id="smoke-3" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    gsap.to("#airplane", { left: "100vw", duration: 10 });
+    gsap.to(".rocket", {
+      top: "320px",
+      left: "130px",
+      visibility: "visible",
+      duration: 3,
+      stagger: 1.6,
+      delay: 1.6,
+    });
+    gsap.to(".explosion", {
+      visibility: "visible",
+      transform: "scale(1.1)",
+      stagger: 1.5,
+      duration: 1,
+      delay: 3.4,
+    });
+    gsap.to(".smoke", {
+      visibility: "visible",
+      bottom: "600px",
+      opacity: 1,
+      duration: "10",
+      stagger: 0.2,
+      delay: 8,
+    });
+  </script>
+</html>

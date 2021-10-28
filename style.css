@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./img/bg.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.upper {
+  width: 100%;
+}
+
+#airplane {
+  width: 300px;
+  position: relative;
+  top: -50px;
+  left: -300px;
+}
+
+.rockets {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rocket {
+  width: 100px;
+  transform: rotateZ(60deg);
+  position: relative;
+  top: -150px;
+  visibility: hidden;
+}
+
+/* .rocket:first-child {
+  top: 250px;
+  left: 100px;
+} */
+
+.lower {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 100px;
+}
+
+.lower div {
+  display: flex;
+  position: relative;
+}
+
+.lower div img {
+  position: absolute;
+}
+
+.house {
+  width: 300px;
+}
+
+.explosion {
+  width: 200px;
+  visibility: hidden;
+  left: 50px;
+}
+
+.smoke {
+  width: 200px;
+  visibility: hidden;
+  opacity: 0;
+}
